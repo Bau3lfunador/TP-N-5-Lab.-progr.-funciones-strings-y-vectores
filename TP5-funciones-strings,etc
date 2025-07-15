@@ -1,0 +1,96 @@
+1)-Procedimiento: No devuelve valor. Solo ejecuta instrucciones. Se declara con void.
+  -Función: Devuelve un valor usando return. Se usa cuando se necesita un resultado calculado.
+Usar procedimiento cuando solo se realizan acciones como mostrar por pantalla, modificar estructuras, etc.
+Usar función cuando se requiere obtener un resultado como un cálculo matemático, búsqueda, etc.
+
+2)
+Tipo de retorno (int, float, string, void, etc.)
+Nombre de la función
+
+Parámetros (opcional) entre paréntesis
+Cuerpo de la función entre { }
+Instrucción return (si no es void)
+
+int suma(int a, int b) {
+    return a + b;
+}
+
+3)
+Un arreglo de caracteres (char[]) es una estructura básica de C usada para almacenar texto, pero requiere
+manejo manual de memoria. El tipo string es una clase de C++ más flexible y segura que permite manipular 
+texto con métodos integrados como length(), substr(), etc.
+
+4)
+| Método / Operador | Funcionalidad                                                         | Ejemplo de uso               |
+| ----------------- | --------------------------------------------------------------------- | ---------------------------- |
+| `max_size`        | Devuelve el número máximo de caracteres que puede contener el string. | `cout << s.max_size();`      |
+| `compare`         | Compara el string con otro string o C-string, devuelve un int.        | `s.compare("hola") == 0`     |
+| `copy`            | Copia caracteres del string a un arreglo de caracteres (char array).  | `s.copy(buffer, 4, 0);`      |
+| `c_str`           | Retorna un puntero a un arreglo de C-string (null-terminated).        | `printf("%s", s.c_str());`   |
+| `data`            | Similar a `c_str`, devuelve puntero al arreglo interno.               | `cout << s.data();`          |
+| `empty`           | Devuelve `true` si el string está vacío.                              | `if (s.empty()) {}`          |
+| `erase`           | Elimina caracteres del string según posición e índice.                | `s.erase(2, 3);`             |
+| `find`            | Busca un substring o carácter y devuelve la posición o `npos`.        | `s.find("lo");`              |
+| `find_last_of`    | Busca el último carácter que coincida con un conjunto de caracteres.  | `s.find_last_of("aeiou");`   |
+| `front`           | Devuelve referencia al primer carácter del string.                    | `char c = s.front();`        |
+| `insert`          | Inserta caracteres en el string en la posición dada.                  | `s.insert(3, "abc");`        |
+| `replace`         | Reemplaza una porción del string con otro string.                     | `s.replace(1, 2, "xy");`     |
+| `reserve`         | Cambia la capacidad reservada del string (no cambia el tamaño).       | `s.reserve(100);`            |
+| `resize`          | Cambia el tamaño del string (rellena o corta).                        | `s.resize(5, '*');`          |
+| `substr`          | Devuelve un substring del string.                                     | `string t = s.substr(1, 3);` |
+| `swap`            | Intercambia el contenido de dos strings.                              | `s.swap(other);`             |
+
+
+5)
+Un vector es una clase plantilla que representa un arreglo dinámico. Características: tamaño dinámico,
+acceso aleatorio, métodos integrados. Se declara como: vector<int> v; y se puede inicializar como: 
+vector<int> v = {1, 2, 3};
+
+6)
+Se usa el método resize(nuevo_tamaño). Por ejemplo: v.resize(10);
+
+7)
+Puede producirse un comportamiento indefinido si se usa [], o lanzar una excepción out_of_range si se usa at().
+
+8)
+Es una clase plantilla de la STL que permite almacenar colecciones dinámicas de elementos. 
+Proporciona funcionalidades como agregar, eliminar, acceder, ordenar y manipular elementos fácilmente.
+
+9)
+size: devuelve 5 si el vector tiene 5 elementos
+
+capacity: devuelve 8 si el vector puede guardar hasta 8 elementos sin redimensionar
+
+empty: devuelve true si el vector está vacío
+
+push_back: agrega el número 10 al final del vector
+
+pop_back: elimina el último número del vector
+
+front: devuelve el primer número del vector, por ejemplo 3 si el vector es [3, 5, 7]
+
+back: devuelve el último número del vector, por ejemplo 7 si el vector es [3, 5, 7]
+
+at: devuelve el número que está en la posición 2, por ejemplo 8 si el vector es [4, 6, 8]
+
+assign: reemplaza todo el vector con los elementos [1, 2, 3] de otro vector
+
+erase: elimina el segundo número del vector si es [10, 20, 30], quedando [10, 30]
+
+erase: elimina los tres primeros números del vector [5, 6, 7, 8], quedando [8]
+
+insert: inserta el número 100 en la segunda posición del vector [1, 2, 3], quedando [1, 100, 2, 3]
+
+insert: inserta los números de otro vector al inicio, por ejemplo [9, 8] + [1, 2] → [9, 8, 1, 2]
+
+clear: borra todos los elementos del vector
+
+swap: intercambia los elementos de dos vectores, por ejemplo [1, 2] y [9, 8] pasan a [9, 8] y [1, 2]
+
+
+
+
+10)
+Una clase es una plantilla que define propiedades y comportamientos de objetos. Su estructura incluye atributos
+(variables) y métodos (funciones). Un objeto es una instancia concreta de una clase. Su propósito es modelar 
+entidades del mundo real en programación orientada a objetos.
